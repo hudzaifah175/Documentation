@@ -1,84 +1,53 @@
-# Docpress
-<!--{h1:.massive-header.-with-tagline}-->
+## Overview
+Email Approval is one way approval is implemented on email (not through the form), so approval can be done more easily without having to open the website first.
 
-> Painless Markdown publishing
+## Email Format
 
-Documentation website generator.<br>
-Generates great websites from Markdown files.
+Example of very basic Email Tool setting
 
-![Last version](https://img.shields.io/github/tag/docpress/docpress.svg?style=flat-square)
-[![Build Status](http://img.shields.io/travis/docpress/docpress/master.svg?style=flat-square)](https://travis-ci.org/docpress/docpress)
-[![Coverage Status](https://img.shields.io/coveralls/docpress/docpress.svg?style=flat-square)](https://coveralls.io/github/docpress/docpress)
-[![Dependency status](http://img.shields.io/david/docpress/docpress.svg?style=flat-square)](https://david-dm.org/docpress/docpress)
-[![Dev Dependencies Status](http://img.shields.io/david/dev/docpress/docpress.svg?style=flat-square)](https://david-dm.org/docpress/docpress#info=devDependencies)
-[![NPM Status](http://img.shields.io/npm/dm/docpress.svg?style=flat-square)](https://www.npmjs.org/package/docpress)
+`<a href="mailto:admin@domain?subject=Approval processId:#assignment.processId#&body=approved" data-rel="external">APPROVE</a>`
+`<br>`
+`<br>`
+`<a href="mailto:admin@domain?subject=Revision processId:#assignment.processId#&body=revised" data-rel="external">REVISE</a>`
+`<br>`
+`<br>`
+`<a href="mailto:admin@domain?subject=Rejection processId:#assignment.processId#&body=rejected" data-rel="external">REJECT</a>`
 
-## Table of Contents
+## Approval Settings
 
-* [What is it](#what-is-it)
-* [Examples](#examples)
-* [Usage](#usage)
-* [Support](#support)
-* [Thanks](#thanks)
+##### Parameters
+* ID - Application ID
+* Process ID - Application Version (optional) : if not included will retrieve the latest version
+* Activity ID - The activity ID to do
+* Content - display any pop-ups that will be sent to the corresponding email.
 
-## What is it
+Here is an example of filling fields in email approval:
 
-Docpress generates websites from your project's basic documentation; that is, at the very least, a `README.md` file. It also supports multiple Markdown pages in `docs/`.
+![image](/uploads/00468fab18ec8d41be0458f963b4d9f9/image.png)
 
-Under heavy development now; guides and instructions will magically appear here when we're stable.
 
-## Examples
+1. Open Options * Settings * on the options on the right
+2. Select * Email Approval Content * on the left selection
+3. Click * Approval * on Activity ID
 
-Check out the [Docpress Showcase](docs/showcase.md) to see how Docpress helped developers build great-looking websites.
+![image](/uploads/81303da410e5873880727a63ea41f686/image.png)
 
-## Usage
+## How to Determine what Content will be displayed in Email Approval ##
 
-Still under heavy development, consider this a preview.
-See the [Getting Started](docs/getting-started/quickstart.md) guide for more details.
-
-```sh
-$ npm install -g docpress
-$ echo "# My project" > README.md
-$ echo "Documented by Markdown files." >> README.md
-$ docpress serve
-
-  Docpress
-  starting development - ^C to exit
-
-  350ms ✓   first build                 
-      on    watching changes
-      on    livereload
-      on    http://localhost:3000
-
-  Running
+in this case are an example for content Arya Noble email approval, the content is
+``` javascript
+Approval Status: {form_sf_approval_sf_appr_approval} {form_sf_approval_sf_appr_sf_remark_sf_app_history_approval_status} Remarks:[{form_sf_approval_sf_appr_sf_remark_sf_app_history_remark}]{nouse}
 ```
 
-Support
--------
+### * For {form_sf_approval_sf_appr_approval} ###
+#### the order is as follows : ####
+* form - form
+* sf_approval - subform (if its form type is subform)
+* sf_appr subform (if its form type is subform)
+* approval - 
 
-- [Documentation](http://docpress.github.io/)
-- [Gitter chat](https://gitter.im/docpress/Lobby)
-
-Let's build our first Docpress site.
-[Quickstart guide →](docs/getting-started/quickstart.md)
-
-<!--{p:.pull-box}-->
-
-Thanks
-------
-
-<!--{h2:style='display:none'}-->
-
-**docpress** © 2015+, Rico Sta. Cruz. Released under the [MIT] License.<br>
-Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
-
-<!--{p:style='display:none'}-->
-
-> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
-> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
-> Twitter [@rstacruz](https://twitter.com/rstacruz)
-
-<!--{blockquote:style='display:none'}-->
-
-[MIT]: http://mit-license.org/
-[contributors]: http://github.com/rstacruz/docpress/contributors
+#### The trick is as follows: ####
+1. open *All Apps* in the menu options on the right
+2. Select *Payment Request Application*
+3. Find the form which will be taken (in this case the form will be taken is EAF-Approval form)
+4. Select the approval form and edit from approval to see the ID of the Approval Form (green box) and what form it uses (blue box)
