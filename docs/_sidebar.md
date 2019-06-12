@@ -9,7 +9,7 @@
 - Tutorials
 
   - Flutter
-    - [Testing Testing Testing](fluttercountertutorial.md)
+    - [Counter](fluttercountertutorial.md)
     - [Timer](fluttertimertutorial.md)
     - [Infinite List](flutterinfinitelisttutorial.md)
     - [Login](flutterlogintutorial.md)
