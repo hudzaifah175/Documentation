@@ -8,6 +8,13 @@
 
 - Tutorials
 
+<details>
+<summary> Plugin List </summary>
+<br>
+- Kecak Plugins lis
+- Kecak Dropdown
+</details>
+
   - Flutter
     - [Counter](fluttercountertutorial.md)
     - [Timer](fluttertimertutorial.md)
