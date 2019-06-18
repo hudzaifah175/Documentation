@@ -1,48 +1,57 @@
-- Introduction
+docs:
+  - title: Getting Started
+    children:
+      - title: "Quick-Start Guide"
+        url: /docs/quick-start-guide/
+      - title: "Structure"
+        url: /docs/structure/
+      - title: "Installation"
+        url: /docs/installation/
+      - title: "Upgrading"
+        url: /docs/upgrading/
 
-  - [Getting Started](gettingstarted.md)
-  - [Why Bloc?](whybloc.md)
-  - [Core Concepts](coreconcepts.md)
-  - [Architecture](architecture.md)
-  - [Testing](testing.md)
+  - title: Customization
+    children:
+      - title: "Configuration"
+        url: /docs/configuration/
+      - title: "Navigation"
+        url: /docs/navigation/
+      - title: "UI Text"
+        url: /docs/ui-text/
+      - title: "Authors"
+        url: /docs/authors/
+      - title: "Layouts"
+        url: /docs/layouts/
 
-- Tutorials
+  - title: Content
+    children:
+      - title: "Working with Posts"
+        url: /docs/posts/
+      - title: "Working with Pages"
+        url: /docs/pages/
+      - title: "Working with Collections"
+        url: /docs/collections/
+      - title: "Helpers"
+        url: /docs/helpers/
+      - title: "Utility Classes"
+        url: /docs/utility-classes/
 
-<details>
-<summary> Plugin List </summary>
-<br>
-- Kecak Plugins lis
-- Kecak Dropdown
-</details>
+  - title: Extras
+    children:
+      - title: "Stylesheets"
+        url: /docs/stylesheets/
+      - title: "JavaScript"
+        url: /docs/javascript/
 
-  - Flutter
-    - [Counter](fluttercountertutorial.md)
-    - [Timer](fluttertimertutorial.md)
-    - [Infinite List](flutterinfinitelisttutorial.md)
-    - [Login](flutterlogintutorial.md)
-    - [Weather](flutterweathertutorial.md)
-    - [Todos](fluttertodostutorial.md)
-    - [Firebase Login](flutterfirebaselogintutorial.md)
-  - AngularDart
-    - [Counter](angularcountertutorial.md)
-  - Flutter + AngularDart
-    - [Github Search](flutterangulargithubsearch.md)
-
-- Recipes
-
-  - Flutter
-    - [Show SnackBar](recipesfluttershowsnackbar.md)
-    - [Navigation](recipesflutternavigation.md)
-    - [Bloc Access](recipesflutterblocaccess.md)
-
-- Tools
-
-  - Extensions
-
-    - [IntelliJ](blocintellijextension.md)
-    - [VSCode](blocvscodeextension.md)
-
-- API Reference
-  - [bloc](https://pub.dartlang.org/documentation/bloc/latest/bloc/bloc-library.html)
-  - [flutter_bloc](https://pub.dartlang.org/documentation/flutter_bloc/latest/flutter_bloc/flutter_bloc-library.html)
-  - [angular_bloc](https://pub.dartlang.org/documentation/angular_bloc/latest/angular_dart/angular_dart-library.html)
+  - title: Meta
+    children:
+      - title: "History"
+        url: /docs/history/
+      - title: "Contributing"
+        url: /docs/contributing/
+      - title: "Old 2.2 Docs"
+        url: /docs/docs-2-2/
+      - title: "License"
+        url: /docs/license/
+      - title: "Terms &amp; Privacy Policy"
+        url: /terms/
